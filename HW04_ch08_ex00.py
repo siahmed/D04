@@ -21,6 +21,12 @@
 
 # Body
 
+def count(word, letter):
+    count = 0
+    for current_letter in word:
+        if current_letter == letter:
+            count = count + 1
+    print(count)
 
 ###############################################################################
 def main():
@@ -29,6 +35,9 @@ def main():
     # below, passing various strings and letters
     print("Hello World!")
 
+count('eritrea','e')
+
+count('lateral','a')
 
 if __name__ == '__main__':
     main()

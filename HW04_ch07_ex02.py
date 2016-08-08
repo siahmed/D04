@@ -21,15 +21,25 @@
 
 ###############################################################################
 # Imports
-
+import math
 
 # Body
-
+def eval_loop():
+	user_input = str(input("Please enter an input"))
+	user_result = ''
+	done = 'done'
+	while user_input != done:
+		user_result = eval(user_input)
+		print(user_result)
+		user_input = str(input("Please enter an input"))
+	if user_input == 'done':
+		print(user_result)
+	return user_result
 
 ###############################################################################
 def main():
-    pass  # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+
+    eval_loop()
 
 if __name__ == '__main__':
     main()

@@ -14,8 +14,7 @@
 
 
 def any_lowercase1(s):
-    """Explain what is wrong, if anything, here.
-    """
+    # looks like nothing is wrong
     for c in s:
         if c.islower():
             return True
@@ -24,8 +23,7 @@ def any_lowercase1(s):
 
 
 def any_lowercase2(s):
-    """Explain what is wrong, if anything, here.
-    """
+    # difference between c and 'c' makes the function return the wrong result
     for c in s:
         if 'c'.islower():
             return 'True'
@@ -34,16 +32,14 @@ def any_lowercase2(s):
 
 
 def any_lowercase3(s):
-    """Explain what is wrong, if anything, here.
-    """
+    # only responds to last letter in word, thus if all previous letters are lowercase and the function should return True, if the last letter is uppercase it will incorrectly return False
     for c in s:
         flag = c.islower()
     return flag
 
 
 def any_lowercase4(s):
-    """Explain what is wrong, if anything, here.
-    """
+    # works fine
     flag = False
     for c in s:
         flag = flag or c.islower()
@@ -51,8 +47,7 @@ def any_lowercase4(s):
 
 
 def any_lowercase5(s):
-    """Explain what is wrong, if anything, here.
-    """
+    # returns False for both an all-lowercase word and an all-uppercase word, which means it's not checking if any are lowercase but rather if all are lowercase
     for c in s:
         if not c.islower():
             return False
@@ -66,7 +61,7 @@ def main():
     # call that function with a string for which the function returns
     # incorrectly.
     # ex.: any_lowercase_("thisstringmessesupthefunction")
-    print("Hello World!")
+    # print("Hello World!")
 
 
 if __name__ == '__main__':
